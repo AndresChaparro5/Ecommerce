@@ -30,74 +30,110 @@
 	</head>
 
 	<body>
-		
+		<audio controls loop preload="auto">
+			<source src="music/pajaritos.mp3" type="audio/mpeg">
+			Tu navegador no soporta el audio
+		</audio>
 		<div class="title">
-			<h1>Ecommerce don Hernesto</h1>
+			<h1>Ecommerce san Andresito</h1>
 		</div>
 		
-		<div class="container-movies" id="table">
+		<div class="container" id="table">
 			
 			<table>
-				<caption>Nuestro productos</caption>
+				<caption><h2>Nuestro productos</h2></caption>
 				<tr>
-					<th>Aseo</th>
-					<th>Pepino</th>
+					<th>Producto</th>
+					<th>Precio</th>
 				</tr>
 				<tr>
-					<th>esto</th>
-					<th>lo otro</th>
+					<td><a href="#cleaner">Cleaner</a></td>
+					<td>5.000</td>
+				</tr>
+				<tr>
+					<td><a href="#clock">Clock</a></td>
+					<td>20.000</td>
+				</tr>
+				<tr>
+					<td><a href="#smartClock">Smart Clock</a></td>
+					<td>50.000</td>
 				</tr>
 			</table>
 		</div>
 		
-		<div class="container-movies">
-			<div class="sinopsis">
-				<h2>Cleaner</h2>
+		<div class="container">
+			<div>
 				<picture>
 					<source media="(min-width:650px)" srcset="pictures/clean.png">
 					<source media="(min-width:465px)" srcset="pictures/clean.png">	
 					<img src="pictures/clean.png" alt="clean" style="width:200px;">
 				</picture> 
-				<h2>Descripción</h2>
+			</div>
+			<div class="sinopsis">
+				<h2 id="cleaner">Cleaner</h2>
 				<p>
 					"Un viaje épico por el universo, desde lo infinitamente pequeño hasta lo inconmensurablemente grande. 
 					Cosmos combina ciencia, historia y asombro para revelar los secretos del espacio y nuestro lugar en él."
 				</p>
 			</div>
 		</div>
-		<div class="container-movies">
-			<div class="sinopsis">
-				<h2>Clock</h2>
+		<div class="container">
+			<div>
 				<picture>
 					<source media="(min-width:650px)" srcset="pictures/clock.png">
 					<source media="(min-width:465px)" srcset="pictures/clock.png">
 					<img src="pictures/clock.png" alt="clock" style="width:200px;">
 				</picture> 
-				<h2>Descripción</h2>
+			</div>
+			<div class="sinopsis">
+				<h2 id="clock">Clock</h2>
 				<p>
 					"Un viaje épico por el universo, desde lo infinitamente pequeño hasta lo inconmensurablemente grande. 
 					Cosmos combina ciencia, historia y asombro para revelar los secretos del espacio y nuestro lugar en él."
 				</p>
 			</div>
 		</div>
-		<div class="container-movies">
-			<div class="sinopsis">
-				<h2>Smart Clock</h2>
+		<div class="container">
+			<div>
 				<picture>
 					<source media="(min-width:650px)" srcset="pictures/smart-clock.png">
 					<source media="(min-width:465px)" srcset="pictures/smart-clock.png">
 					<img src="pictures/smart-clock.png" alt="amart-clock" style="width:200px;">
 				</picture> 
-				<h2>Descripción</h2>
+			</div>
+			<div class="sinopsis" id="smartClock">
+				<h2>Smart Clock</h2>
 				<p>
 					"Un viaje épico por el universo, desde lo infinitamente pequeño hasta lo inconmensurablemente grande. 
 					Cosmos combina ciencia, historia y asombro para revelar los secretos del espacio y nuestro lugar en él."
 				</p>
 			</div>
 		</div>
-			
+		<div id="video">
+			<h2>Conoce más sobre nuestra tienda</h2>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/nYXI6N4r6P8?si=37ohlMxzmYw2kl2f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		</div>
+		<form action="/procesar-formulario" method="post">
+			<h2 id="form-title">¿Como te parecio nuestra tienda?</h2>
+			<div>
+				<label for="nombre">Nombre completo:</label>
+				<input type="text" id="nombre" name="nombre" required>
+			</div>
+    
+			<div>
+				<label for="email">Correo electrónico:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+    
+			<div>
+				<label for="mensaje">Comentarios:</label>
+				<textarea id="mensaje" name="mensaje" rows="5" cols="40" required></textarea>
+			</div>
+    
+			<button type="submit">Enviar mensaje</button>
+		</form>
 		
-		<footer>
+		<footer id="footer">
 			<p align="center">© 2025 AndrésCh</p>
 		</footer>
 	</body>

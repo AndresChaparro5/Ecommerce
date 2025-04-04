@@ -1,8 +1,15 @@
+/* Diseño del cuerpo de la pagina */
 body{
 	background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(36,1,0,1) 0%, rgba(121,9,9,1) 35%, rgba(255,71,0,1) 100%);
+	font-family: 'Arial', sans-serif;
 }
 
+p{
+	color: #482303;
+}
+
+/* Diseño del título */
 h1 {
     font-size: 4rem;
     font-weight: bold;
@@ -12,50 +19,165 @@ h1 {
     color: transparent;
     display: inline-block;
 }
-.container-movies {
+
+/* Establece la alineación del titulo */
+.title{
+	display: flex;
+	justify-content: center;
+}
+
+audio{
+	position: fixed;
+	z-index: 50;
+}
+
+/* Diseño de cada contenedor de peliculas */
+.container {
 	display: flex;
 	justify-content: center;
 	border: 2px solid black;
 	background: url('pictures/fondo.jpg') center/cover no-repeat fixed;
-
+	gap: 2em;
+	margin: 0 5%;
+	padding: 2em;
 }
-.container-movies > div {
-  /*background-color: DodgerBlue;*/
+/* alinea todos los div dentro de las clases container a la
+ * izquierda, cambia el color de texto a negro y establece
+ * el tamaño de fuente */
+.container > div {
   color: black;
-  /*margin: 0px;*/
-  text-align: center;
-  /*line-height: 75px;*/
+  text-align: left;
   font-size: 20px;
 }
 
-div picture img{
-	border: 8px ridge #1D3BEB;
-}
-
-.title{
-	display: flex;
-	justify-content: center;
-	/*background: url('pictures/fondo.jpg') center/cover no-repeat fixed;*/
-}
-.image{
-	display: flex;
-	align-items: center;
-}
-div iframe{
-	border: 8px ridge #000000;
-}
 div table, tr, th, td{
 	border: 3px solid black;
 }
 
-div table, th{
-	background-color: blue;
+/* Diseño de la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 1%;
 }
 
-#table{
-	padding: 1%;
+/* Diseño de la primera fila (cabecera) de la tabla */
+table th {
+  background-color: #4D4D4D;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
 }
 
+/* Espaciado de las filas */
+th, td {
+  padding: 12px 15px;
+}
+body tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+
+/* Para alternar los colores entre las filas */
+tbody tr:nth-child(even) {
+  background-color: #FF9E1E;
+}
+tr:nth-child(odd) {
+  background-color: #FFA500;
+}
+
+/* cuando el mouse pasa por encima de una fila par o impar 
+ * cambia de color */
+tbody tr:nth-child(even):hover {
+  background-color: #e9e9e9;
+}
+tbody tr:nth-child(odd):hover {
+  background-color: #FFFFFF;
+}
+
+/* La ultima fila tiene un estilo ligeramente diferente */
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+tbody tr:last-of-type td {
+  font-weight: bold;
+  color: #000000;
+}
+
+
+/* Fondo y borde de las imagenes */
+div picture img{
+	backdrop-filter: blur(4px);
+	background-color: #FFC7002c;
+	border: 4px solid #BF5F0B;
+	border-radius: 25px;
+	padding: 1em;
+}
+
+/* Estilo para el video*/
+#video{
+	display: grid;
+	place-items: center;
+	border: 2px solid black;
+	background: url('pictures/fondo.jpg') center/cover no-repeat fixed;
+	gap: 2em;
+	margin: 0 5%;
+	padding: 2em;
+}
+div iframe{
+	border: 8px solid #000000;
+}
+
+/* Título del formulario */
+#form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 15px;
+}
+/* Estilo del formulario */
+form{
+	display: grid;
+	place-items: center;
+	
+	border: 2px solid black;
+	background: url('pictures/fondo.jpg') center/cover no-repeat fixed;
+	gap: 0.5em;
+	margin: 0 5%;
+	padding: 2em;
+	
+	background-color: white;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	align-items: center;
+}
+
+
+/* Campos de texto */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--dark-color);
+  transition: all 0.3s ease;
+}
+
+form div{
+	display: flex;
+	flex-direction: column;
+}
+
+/* Footer */
 footer p{
 	color: white;
 }
