@@ -5,6 +5,7 @@ body{
 	font-family: 'Arial', sans-serif;
 }
 
+/* Color de los parrafos */
 p{
 	color: #482303;
 }
@@ -26,6 +27,7 @@ h1 {
 	justify-content: center;
 }
 
+/* Poner el audio en la parte superior de la pantalla */
 audio{
 	position: fixed;
 	z-index: 50;
@@ -145,6 +147,7 @@ div iframe{
   position: relative;
   padding-bottom: 15px;
 }
+
 /* Estilo del formulario */
 form{
 	display: grid;
@@ -172,6 +175,7 @@ form label {
   transition: all 0.3s ease;
 }
 
+/* centrar elementos del formulario */
 form div{
 	display: flex;
 	flex-direction: column;
